@@ -117,19 +117,19 @@
       "options": [
         {
           "text": "Spanish",
-          "image": "https://via.placeholder.com/20?text=🇪🇸"
+          "image": "https://www.worldometers.info//img/flags/small/tn_sp-flag.gif"
         },
         {
           "text": "French",
-          "image": "https://via.placeholder.com/20?text=🇫🇷"
+          "image": "https://www.worldometers.info//img/flags/small/tn_fr-flag.gif"
         },
         {
           "text": "German",
-          "image": "https://via.placeholder.com/20?text=🇩🇪"
+          "image": "https://www.worldometers.info//img/flags/small/tn_gm-flag.gif"
         },
         {
           "text": "Other",
-          "image": "https://via.placeholder.com/20?text=🌍"
+          "image": "https://t3.ftcdn.net/jpg/01/09/84/42/360_F_109844212_NnLGUrn3RgMHQIuqSiLGlc9d419eK2dX.jpg"
         }
       ]
     },
@@ -139,19 +139,19 @@
       "options": [
         {
           "text": "Daily",
-          "image": "https://via.placeholder.com/20?text=📅"
+          "image": "https://c8.alamy.com/comp/2H9D0KF/24-7-clock-circle-arrow-for-nonstop-service-icon-non-stop-twenty-four-hours-support-24-7-service-open-vector-2H9D0KF.jpg"
         },
         {
           "text": "Weekly",
-          "image": "https://via.placeholder.com/20?text=🗓️"
+          "image": "https://static.vecteezy.com/system/resources/thumbnails/012/794/772/small/3d-calendar-week-png.png"
         },
         {
           "text": "Monthly",
-          "image": "https://via.placeholder.com/20?text=📆"
+          "image": "https://cdn-icons-png.flaticon.com/512/5776/5776621.png"
         },
         {
           "text": "Other",
-          "image": "https://via.placeholder.com/20?text=📥"
+          "image": "https://t3.ftcdn.net/jpg/01/09/84/42/360_F_109844212_NnLGUrn3RgMHQIuqSiLGlc9d419eK2dX.jpg"
         }
       ]
     },
