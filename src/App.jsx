@@ -10,22 +10,25 @@ import Leaderboards from "./pages/Leaderboards";
 import Quests from "./pages/Quests";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Toaster } from "react-hot-toast";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/learn" element={<Learn />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/language" element={<LangRegister />} />
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/leaderboards" element={<Leaderboards />} />
-          <Route path="/quests" element={<Quests />} />
-          <Route path="/character" element={<Character />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/language" element={<LangRegister />} />
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/leaderboards" element={<Leaderboards />} />
+            <Route path="/quests" element={<Quests />} />
+            <Route path="/character" element={<Character />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </AuthProvider>
       </ErrorBoundary>
       <Toaster
         toastOptions={{

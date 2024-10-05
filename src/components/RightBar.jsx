@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import TopBar from "./TopBar";
 import Footer from "./Footer";
+import { useAuth } from "../hooks/useAuth";
 
 const RightBar = () => {
+  const { user } = useAuth();
+
   return (
-    <div className="fixed bottom-0 right-0 w-full max-w-[380px] p-4 mr-12 lg:mr-32 hidden md:block bg-[#131f24]">
+    <div className="fixed right-0 w-full max-w-[380px] p-4 mr-12 lg:mr-32 hidden md:block bg-[#131f24]">
       <>
         <TopBar />
-
         <div className="bg-[#131f24] rounded-2xl p-5 pt-4 pb-6 mb-4 border-2 border-[#37464f]">
           <h2 className="text-lg font-bold tracking-wide text-white font-din-round">
             Unlock Leaderboards!
@@ -23,7 +25,6 @@ const RightBar = () => {
             </p>
           </div>
         </div>
-
         <div className="bg-[#131f24] rounded-2xl p-4 mb-4 border-2 border-[#37464f]">
           <div className="flex justify-between">
             <h2 className="text-lg font-bold text-white font-din-round">
@@ -59,12 +60,11 @@ const RightBar = () => {
             </div>
           </div>
         </div>
-
         <div className="flex flex-col items-center tracking-normal bg-[#131f24] rounded-2xl p-4 pb-5 border-2 border-[#37464f]">
           <h2 className="mb-6 text-lg font-bold text-white font-din-round">
             Create a profile to save your progress!
           </h2>
-          <Link to="/register" className="w-full">
+          <Link to={user ? "/welcome" : "/register"} className="w-full">
             <button
               type="submit"
               className="tracking-wider bg-[#58cc05] text-white font-bold py-3 w-full rounded-2xl shadow-[0_5px_0_#58a700] font-din-round text-[14px] hover:bg-[#58cc02]/90 active:shadow-none active:translate-y-[5px] transition-all duration-150 ease-in-out"
@@ -72,13 +72,14 @@ const RightBar = () => {
               CREATE A PROFILE
             </button>
           </Link>
-          <Link to="/login" className="w-full mt-4">
-            <button className="bg-[#1CB0F6] text-white tracking-wider shadow-[0_5px_0_#1999D6] font-din-round text-[14px] font-bold w-full py-3 rounded-2xl active:shadow-none active:translate-y-[5px] hover:bg-sky-400 transition">
-              SIGN IN
-            </button>
-          </Link>
+          {!user && (
+            <Link to="/login" className="w-full mt-4">
+              <button className="bg-[#1CB0F6] text-white tracking-wider shadow-[0_5px_0_#1999D6] font-din-round text-[14px] font-bold w-full py-3 rounded-2xl active:shadow-none active:translate-y-[5px] hover:bg-sky-400 transition">
+                SIGN IN
+              </button>
+            </Link>
+          )}
         </div>
-
         <Footer />
       </>
     </div>

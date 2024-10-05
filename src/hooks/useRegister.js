@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 const loginUser = async (userData) => {
-  const response = await fetch("http://localhost:3001/login", {
+  const response = await fetch("http://localhost:3001/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const useLogin = () => {
     mutationFn: loginUser,
     onSuccess: () => {
       toast.success("Logged in successfully!");
-      navigate("/dashboard");
+      navigate("/learn");
     },
     onError: (error) => {
       toast.error("Login failed: " + error.message);

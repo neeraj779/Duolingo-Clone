@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
 const links = [
   {
@@ -58,30 +59,46 @@ const LeftbarLink = ({ to, icon, label }) => {
 };
 
 const LeftBar = () => {
+  const { user, logout } = useAuth();
+  console.log(user);
   return (
-    <div className="min-h-screen fixed w-[72px] lg:w-[256px] bg-[#131f24] border-r-2 border-gray-700 flex flex-col py-6">
-      <div className="px-4 mt-2 mb-5 lg:px-8">
-        <img
-          className="block lg:hidden"
-          alt="Duolingo Icon"
-          width={40}
-          height={40}
-          src="https://d35aaqx5ub95lt.cloudfront.net/vendor/0cecd302cf0bcd0f73d51768feff75fe.svg"
-        />
-        <img
-          className="hidden lg:block"
-          alt="Duolingo Logo"
-          width={128}
-          height={30}
-          src="https://d35aaqx5ub95lt.cloudfront.net/vendor/70a4be81077a8037698067f583816ff9.svg"
-        />
+    <div className="min-h-screen fixed w-[72px] lg:w-[256px] bg-[#131f24] border-r-2 border-gray-700 flex flex-col py-6 justify-between">
+      <div>
+        <div className="px-4 mt-2 mb-5 lg:px-8">
+          <img
+            className="block lg:hidden"
+            alt="Duolingo Icon"
+            width={40}
+            height={40}
+            src="https://d35aaqx5ub95lt.cloudfront.net/vendor/0cecd302cf0bcd0f73d51768feff75fe.svg"
+          />
+          <img
+            className="hidden lg:block"
+            alt="Duolingo Logo"
+            width={128}
+            height={30}
+            src="https://d35aaqx5ub95lt.cloudfront.net/vendor/70a4be81077a8037698067f583816ff9.svg"
+          />
+        </div>
+
+        <nav className="flex flex-col pt-2 pl-2 pr-2 space-y-3 lg:pl-4 lg:pr-4">
+          {links.map(({ to, icon, label }) => (
+            <LeftbarLink key={to} to={to} icon={icon} label={label} />
+          ))}
+        </nav>
       </div>
 
-      <nav className="flex flex-col pt-2 pl-2 pr-2 space-y-3 lg:pl-4 lg:pr-4">
-        {links.map(({ to, icon, label }) => (
-          <LeftbarLink key={to} to={to} icon={icon} label={label} />
-        ))}
-      </nav>
+      {user && (
+        <div className="px-4 pb-6 text-white lg:px-8">
+          <p className="text-sm">Hello, {user.name}</p>
+          <button
+            onClick={logout}
+            className="w-full mt-2 rounded-2xl border-b-4 border-[#1999d6] bg-[#48c0f8] px-10 py-2 text-center font-bold uppercase transition"
+          >
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
