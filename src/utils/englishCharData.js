@@ -1,10 +1,4 @@
 const Data = {
-  title: "Let's learn English sounds!",
-  subtitle: "Train your ear and learn to pronounce English sounds",
-  button: {
-    label: "START +10 XP",
-    link: "/start",
-  },
   sections: [
     {
       title: "Vowels",
