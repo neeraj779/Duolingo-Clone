@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import noteSVG from "../assets/svg/note.svg";
 import useFetchQuestions from "../hooks/useFetchQuestions";
-import Loader from "../components/Loader";
+import Loader from "../components/Loader/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 
 const Welcome = () => {
