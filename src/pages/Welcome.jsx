@@ -58,7 +58,7 @@ const Welcome = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#131f24]">
-      <div className="h-2 m-auto bg-gray-300 w-[80vw] mt-2">
+      <div className="h-2 m-auto bg-gray-300 w-[80vw] mt-6">
         <div
           className="h-full bg-green-500"
           style={{ width: `${(step / 6) * 100}%` }}
