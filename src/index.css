@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'din-round-bold';
+    src: url('../public/fonts/din-round-bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'din-round';
+    src: url('../public/fonts/din-round-light.woff2') format('woff2');
+}
+
+body {
+    font-family: 'din-round', sans-serif;
+}
