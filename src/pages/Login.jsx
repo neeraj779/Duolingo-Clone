@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleLogoSvg from "../assets/svg/google-logo.svg";
 import { useAuth } from "../hooks/useAuth";
 
@@ -7,19 +7,24 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, isLoading } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     login({ email, password });
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <section className="bg-[#131f24] w-full min-h-screen">
       <div className="relative flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="absolute left-0 right-0 flex justify-between px-4 top-4">
-          <Link className="text-5xl text-gray-600 " to="/">
+          <button className="text-5xl text-gray-600 " onClick={handleGoBack}>
             &times;
-          </Link>
+          </button>
 
           <Link
             to="/register"
