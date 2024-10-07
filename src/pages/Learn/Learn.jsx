@@ -6,9 +6,9 @@ const Learn = () => {
   return (
     <div className="flex min-h-screen bg-[#131f24]">
       <LeftBar />
-      <div className="flex flex-col items-start flex-grow max-w-screen-lg mx-auto ml-36 lg:ml-[500px]">
+      <div className="flex flex-col items-start flex-grow max-w-screen-lg mx-auto ml-36 lg:ml-[380px]">
         <div className="flex flex-col items-center mt-12">
-          <div className="w-[300px] h-[92px] p-3 mt-4 bg-[#58cc05] rounded-lg text-white px-4 py-8">
+          <div className="w-[592px] h-[90px] p-3 mt-2 bg-[#58cc05] rounded-lg text-white px-4 py-8">
             <div className="flex items-center">
               <div className="m-1">
                 <img
@@ -16,7 +16,7 @@ const Learn = () => {
                   alt=""
                 />
               </div>
-              <span>SECTION 1,</span>
+              <span className="font-extrabold">SECTION 1,</span>
               <span>UNIT 1</span>
             </div>
 
@@ -30,7 +30,7 @@ const Learn = () => {
               <div className="learn-level">
                 <div className="unit__border--outer">
                   <div className="unit__border--inner">
-                    <div className="unit__image-container">
+                    <div className="bg-[#58cc05] unit__image-container">
                       <img
                         className="image--start"
                         src="https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/ef9c771afdb674f0ff82fae25c6a7b0a.svg"
@@ -109,7 +109,7 @@ const Learn = () => {
               <div className="learn-level">
                 <div className="unit__border--outer">
                   <div className="unit__border--inner">
-                    <div className="unit__image-container">
+                    <div className="unit__image-container bg-[#ce82ff]">
                       <img
                         className="image--arrow"
                         src="https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg"
@@ -188,7 +188,7 @@ const Learn = () => {
               <div className="learn-level">
                 <div className="unit__border--outer">
                   <div className="unit__border--inner">
-                    <div className="unit__image-container">
+                    <div className="unit__image-container bg-[#04cd9c]">
                       <img
                         className="image--start"
                         src="https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg"
@@ -267,7 +267,7 @@ const Learn = () => {
               <div className="learn-level">
                 <div className="unit__border--outer">
                   <div className="unit__border--inner">
-                    <div className="unit__image-container">
+                    <div className="unit__image-container bg-[#58cc05]">
                       <img
                         className="image--arrow"
                         src="https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg"
@@ -345,7 +345,7 @@ const Learn = () => {
                 <div className="learn-level">
                   <div className="unit__border--outer">
                     <div className="unit__border--inner">
-                      <div className="unit__image-container">
+                      <div className="unit__image-container bg-[#1cb0f6]">
                         <img
                           className="image--start"
                           src="https://d35aaqx5ub95lt.cloudfront.net/images/path/icons/5e4203031e39fc43d94371565fd0d369.svg"
