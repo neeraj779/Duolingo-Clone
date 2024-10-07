@@ -1,7 +1,7 @@
 import { useState } from "react";
-import languages from "../utils/languages"; // Assuming you have a languages data file
-import { Flag } from "./Flag"; // Your Flag component
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import languages from "../utils/languages";
+import { Flag } from "./Flag";
+import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 export const LanguageDropDown = () => {

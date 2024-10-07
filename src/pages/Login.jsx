@@ -49,7 +49,7 @@ const Login = () => {
                   placeholder="Email or username"
                   required
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} // Update email state
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="relative">
@@ -61,7 +61,7 @@ const Login = () => {
                   className="bg-[#202f36] border-2 border-[#37464f] text-white rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 placeholder-white"
                   required
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)} // Update password state
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <Link
                   to="/forgot-password"
@@ -75,7 +75,7 @@ const Login = () => {
                 className={`w-full rounded-2xl border-b-4 border-[#1999d6] bg-[#48c0f8] px-10 py-3 text-center font-bold uppercase transition md:min-w-[320px] ${
                   isLoading ? "opacity-50 cursor-not-allowed" : ""
                 }`}
-                disabled={isLoading} // Disable button while loading
+                disabled={isLoading}
               >
                 {isLoading ? "Logging in..." : "Log in"}
               </button>
@@ -89,7 +89,7 @@ const Login = () => {
 
             <div className="flex justify-between space-x-4">
               <button
-                type="button" // Button should not submit the form
+                type="button"
                 className="flex items-center justify-center text-[#3c5997] w-1/2 rounded-2xl border-2 border-b-4 border-[#37464f] bg-[#131f24] px-10 py-3 text-center font-bold uppercase transition space-x-2"
               >
                 <img
@@ -100,7 +100,7 @@ const Login = () => {
                 <span>Facebook</span>
               </button>
               <button
-                type="button" // Button should not submit the form
+                type="button"
                 className="flex items-center justify-center text-[#3c5997] w-1/2 rounded-2xl border-2 border-b-4 border-[#37464f] bg-[#131f24] px-10 py-3 text-center font-bold uppercase transition space-x-2"
               >
                 <img
