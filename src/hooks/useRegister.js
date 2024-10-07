@@ -24,8 +24,8 @@ const useLogin = () => {
   return useMutation({
     mutationFn: loginUser,
     onSuccess: () => {
-      toast.success("Logged in successfully!");
-      navigate("/learn");
+      toast.success("Registration successful!");
+      navigate("/login");
     },
     onError: (error) => {
       toast.error("Login failed: " + error.message);
