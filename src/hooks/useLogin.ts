@@ -13,7 +13,8 @@ interface LoginCredentials {
   password: string;
 }
 
-const loginUser = async (credentials: LoginCredentials): Promise<User> => {
+// const loginUser = async (credentials: LoginCredentials): Promise<User> => {
+const loginUser = async (): Promise<User> => {
   // const { email, password } = credentials;
 
   const response = await fetch(
