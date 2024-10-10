@@ -39,27 +39,92 @@
 ```sh
 └── Duolingo-Clone/
     ├── README.md
+    ├── bun.lockb
     ├── eslint.config.js
     ├── index.html
-    ├── package-lock.json
+    ├── main.js
     ├── package.json
     ├── postcss.config.js
     ├── public
-    │   └── fonts
+    │   └── vite.svg
     ├── src
-    │   ├── App.jsx
-    │   ├── api
+    │   ├── App.tsx
     │   ├── assets
+    │   │   ├── fonts
+    │   │   │   ├── din-round-bold.woff2
+    │   │   │   └── din-round-light.woff2
+    │   │   ├── images
+    │   │   │   └── header.png
+    │   │   └── svg
+    │   │       ├── clock.svg
+    │   │       ├── duolingo.svg
+    │   │       ├── error.svg
+    │   │       ├── flags.svg
+    │   │       ├── google-logo.svg
+    │   │       ├── note.svg
+    │   │       └── welcome.svg
+    │   ├── common
+    │   │   └── types
+    │   │       ├── AuthContext.types.ts
+    │   │       ├── Card.types.ts
+    │   │       ├── ErrorBoundary.types.ts
+    │   │       ├── Flag.types.ts
+    │   │       ├── Footer.types.ts
+    │   │       ├── Language.types.ts
+    │   │       ├── LeftBar.types.ts
+    │   │       ├── Login.types.ts
+    │   │       ├── Section.types.ts
+    │   │       ├── TopBar.types.ts
+    │   │       └── welcome.types.ts
     │   ├── components
+    │   │   ├── Card.tsx
+    │   │   ├── ErrorBoundary.tsx
+    │   │   ├── ErrorMessage.tsx
+    │   │   ├── Flag.tsx
+    │   │   ├── Footer.tsx
+    │   │   ├── LanguageCarousel.tsx
+    │   │   ├── LanguageDropDown.tsx
+    │   │   ├── LeftBar.tsx
+    │   │   ├── Loader
+    │   │   │   ├── Loader.tsx
+    │   │   │   └── loader.css
+    │   │   ├── NavBar.tsx
+    │   │   ├── RightBar.tsx
+    │   │   ├── Section.tsx
+    │   │   └── TopBar.tsx
+    │   ├── contexts
+    │   │   └── AuthContext.tsx
     │   ├── hooks
+    │   │   ├── useAuth.ts
+    │   │   ├── useFetchQuestions.ts
+    │   │   ├── useLogin.ts
+    │   │   └── useRegister.ts
     │   ├── index.css
-    │   ├── main.jsx
+    │   ├── main.tsx
     │   ├── mocks
+    │   │   └── db.json
     │   ├── pages
-    │   └── utils
+    │   │   ├── Character.tsx
+    │   │   ├── Landing.tsx
+    │   │   ├── LangRegister.tsx
+    │   │   ├── Leaderboards.tsx
+    │   │   ├── Learn
+    │   │   │   ├── Learn.tsx
+    │   │   │   └── learn.css
+    │   │   ├── Login.tsx
+    │   │   ├── Quests.tsx
+    │   │   ├── Register.tsx
+    │   │   ├── Shop.tsx
+    │   │   └── Welcome.tsx
+    │   ├── utils
+    │   │   ├── englishCharData.ts
+    │   │   └── languages.ts
+    │   └── vite-env.d.ts
     ├── tailwind.config.js
-    ├── vercel.json
-    └── vite.config.js
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
 ```
 
 ---
