@@ -12,13 +12,16 @@ interface RegisterResponse {
 }
 
 const registerUser = async (userData: UserData): Promise<RegisterResponse> => {
-  const response = await fetch("http://localhost:3001/users", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(userData),
-  });
+  const response = await fetch(
+    "https://my-json-server.typicode.com/neeraj779/Duolingo-Clone-Backend/users",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Registration failed");

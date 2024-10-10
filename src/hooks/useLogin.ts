@@ -17,15 +17,22 @@ const loginUser = async ({
   email,
   password,
 }: LoginCredentials): Promise<User> => {
-  const response = await fetch("http://localhost:3001/users");
+  const response = await fetch(
+    "https://my-json-server.typicode.com/neeraj779/Duolingo-Clone-Backend/users"
+  );
 
   if (!response.ok) {
     throw new Error("Failed to fetch users");
   }
 
-  const users: User[] = await response.json();
+  // const users: User[] = await response.json();
 
-  const user = users.find((u) => u.email === email && u.password === password);
+  // const user = users.find((u) => u.email === email && u.password === password); //todo: uncomment this line and remove the line below
+  const user = {
+    name: "John Doe",
+    email: "hi.there@gmail.com",
+    password: "password",
+  }; // todo: remove this line added for testing purposes only
 
   if (!user) {
     throw new Error("Invalid email or password");
