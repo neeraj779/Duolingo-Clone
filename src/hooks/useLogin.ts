@@ -13,10 +13,9 @@ interface LoginCredentials {
   password: string;
 }
 
-const loginUser = async ({
-  email,
-  password,
-}: LoginCredentials): Promise<User> => {
+const loginUser = async (credentials: LoginCredentials): Promise<User> => {
+  // const { email, password } = credentials;
+
   const response = await fetch(
     "https://my-json-server.typicode.com/neeraj779/Duolingo-Clone-Backend/users"
   );
